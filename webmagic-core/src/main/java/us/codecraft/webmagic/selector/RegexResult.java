@@ -9,23 +9,23 @@ package us.codecraft.webmagic.selector;
  */
 class RegexResult {
 
-    private String[] groups;
+  private String[] groups;
 
-    public static final RegexResult EMPTY_RESULT = new RegexResult();
+  public static final RegexResult EMPTY_RESULT = new RegexResult();
 
-    public RegexResult() {
+  public RegexResult() {
 
+  }
+
+  public RegexResult(String[] groups) {
+    this.groups = groups;
+  }
+
+  public String get(int groupId) {
+    if (groups == null) {
+      return null;
     }
-
-    public RegexResult(String[] groups) {
-        this.groups = groups;
-    }
-
-    public String get(int groupId) {
-        if (groups == null) {
-            return null;
-        }
-        return groups[groupId];
-    }
+    return groups[groupId];
+  }
 
 }

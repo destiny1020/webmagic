@@ -5,33 +5,33 @@ package us.codecraft.webmagic.samples;
  */
 public class GithubRepo {
 
-    private String name;
+  private String name;
 
-    private String author;
+  private String author;
 
-    private String readme;
+  private String readme;
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public String getAuthor() {
-        return author;
-    }
+  public String getAuthor() {
+    return author;
+  }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+  public void setAuthor(String author) {
+    this.author = author;
+  }
 
-    public String getReadme() {
-        return readme;
-    }
+  public String getReadme() {
+    return readme;
+  }
 
-    public void setReadme(String readme) {
-        this.readme = readme;
-    }
+  public void setReadme(String readme) {
+    this.readme = readme;
+  }
 }

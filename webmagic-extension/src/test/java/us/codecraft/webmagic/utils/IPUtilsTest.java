@@ -7,8 +7,8 @@ import org.junit.Test;
  */
 public class IPUtilsTest {
 
-    @Test
-    public void testGetFirstNoLoopbackIPAddresses() throws Exception {
-        System.out.println(IPUtils.getFirstNoLoopbackIPAddresses());
-    }
+  @Test
+  public void testGetFirstNoLoopbackIPAddresses() throws Exception {
+    System.out.println(IPUtils.getFirstNoLoopbackIPAddresses());
+  }
 }

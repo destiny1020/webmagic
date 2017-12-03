@@ -1,13 +1,11 @@
 package us.codecraft.webmagic.model.samples;
 
 /**
- * @author code4crafter@gmail.com <br>
- * Date: 13-8-2 <br>
- * Time: 上午8:10 <br>
+ * @author code4crafter@gmail.com <br> Date: 13-8-2 <br> Time: 上午8:10 <br>
  */
 public interface Blog {
 
-    public String getTitle();
+  public String getTitle();
 
-    public String getContent();
+  public String getContent();
 }

@@ -1,8 +1,7 @@
 package us.codecraft.webmagic.handler;
 
-import us.codecraft.webmagic.Request;
-
 import java.util.regex.Pattern;
+import us.codecraft.webmagic.Request;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,23 +14,23 @@ import java.util.regex.Pattern;
  */
 public abstract class PatternRequestMatcher implements RequestMatcher {
 
-    /**
-     * match pattern. only matched page should be handled.
-     */
-    protected String pattern;
+  /**
+   * match pattern. only matched page should be handled.
+   */
+  protected String pattern;
 
-    private Pattern patternCompiled;
+  private Pattern patternCompiled;
 
-    /**
-     * @param pattern url pattern to handle
-     */
-    public PatternRequestMatcher(String pattern) {
-        this.pattern = pattern;
-        this.patternCompiled = Pattern.compile(pattern);
-    }
+  /**
+   * @param pattern url pattern to handle
+   */
+  public PatternRequestMatcher(String pattern) {
+    this.pattern = pattern;
+    this.patternCompiled = Pattern.compile(pattern);
+  }
 
-    @Override
-    public boolean match(Request request) {
-        return patternCompiled.matcher(request.getUrl()).matches();
-    }
+  @Override
+  public boolean match(Request request) {
+    return patternCompiled.matcher(request.getUrl()).matches();
+  }
 }

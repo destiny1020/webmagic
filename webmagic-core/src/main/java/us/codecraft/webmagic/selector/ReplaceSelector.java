@@ -13,36 +13,36 @@ import java.util.regex.PatternSyntaxException;
  */
 public class ReplaceSelector implements Selector {
 
-    private String regexStr;
+  private String regexStr;
 
-    private String replacement;
+  private String replacement;
 
-    private Pattern regex;
+  private Pattern regex;
 
-    public ReplaceSelector(String regexStr, String replacement) {
-        this.regexStr = regexStr;
-        this.replacement = replacement;
-        try {
-            regex = Pattern.compile(regexStr);
-        } catch (PatternSyntaxException e) {
-            throw new IllegalArgumentException("invalid regex", e);
-        }
+  public ReplaceSelector(String regexStr, String replacement) {
+    this.regexStr = regexStr;
+    this.replacement = replacement;
+    try {
+      regex = Pattern.compile(regexStr);
+    } catch (PatternSyntaxException e) {
+      throw new IllegalArgumentException("invalid regex", e);
     }
+  }
 
-    @Override
-    public String select(String text) {
-        Matcher matcher = regex.matcher(text);
-        return matcher.replaceAll(replacement);
-    }
+  @Override
+  public String select(String text) {
+    Matcher matcher = regex.matcher(text);
+    return matcher.replaceAll(replacement);
+  }
 
-    @Override
-    public List<String> selectList(String text) {
-        throw new UnsupportedOperationException();
-    }
+  @Override
+  public List<String> selectList(String text) {
+    throw new UnsupportedOperationException();
+  }
 
-    @Override
-    public String toString() {
-        return regexStr + "_" + replacement;
-    }
+  @Override
+  public String toString() {
+    return regexStr + "_" + replacement;
+  }
 
 }

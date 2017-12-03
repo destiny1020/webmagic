@@ -9,13 +9,13 @@ import us.codecraft.webmagic.Task;
  */
 public interface SubPipeline extends RequestMatcher {
 
-    /**
-     * process the page, extract urls to fetch, extract the data and store
-     *
-     * @param resultItems resultItems
-     * @param task task
-     * @return whether continue to match
-     */
-    public MatchOther processResult(ResultItems resultItems, Task task);
+  /**
+   * process the page, extract urls to fetch, extract the data and store
+   *
+   * @param resultItems resultItems
+   * @param task task
+   * @return whether continue to match
+   */
+  public MatchOther processResult(ResultItems resultItems, Task task);
 
 }

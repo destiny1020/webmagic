@@ -5,10 +5,10 @@ package us.codecraft.webmagic.model.formatter;
  */
 public interface ObjectFormatter<T> {
 
-    T format(String raw) throws Exception;
+  T format(String raw) throws Exception;
 
-    Class<T> clazz();
+  Class<T> clazz();
 
-    void initParam(String[] extra);
+  void initParam(String[] extra);
 
 }

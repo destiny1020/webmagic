@@ -9,16 +9,16 @@ import us.codecraft.webmagic.scheduler.PriorityScheduler;
  */
 public class LevelLimitScheduler extends PriorityScheduler {
 
-    private int levelLimit = 3;
+  private int levelLimit = 3;
 
-    public LevelLimitScheduler(int levelLimit) {
-        this.levelLimit = levelLimit;
-    }
+  public LevelLimitScheduler(int levelLimit) {
+    this.levelLimit = levelLimit;
+  }
 
-    @Override
-    public synchronized void push(Request request, Task task) {
-        if (((Integer) request.getExtra("_level")) <= levelLimit) {
-            super.push(request, task);
-        }
+  @Override
+  public synchronized void push(Request request, Task task) {
+    if (((Integer) request.getExtra("_level")) <= levelLimit) {
+      super.push(request, task);
     }
+  }
 }

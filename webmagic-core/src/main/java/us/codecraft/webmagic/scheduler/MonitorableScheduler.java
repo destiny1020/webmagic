@@ -10,8 +10,8 @@ import us.codecraft.webmagic.Task;
  */
 public interface MonitorableScheduler extends Scheduler {
 
-    public int getLeftRequestsCount(Task task);
+  public int getLeftRequestsCount(Task task);
 
-    public int getTotalRequestsCount(Task task);
+  public int getTotalRequestsCount(Task task);
 
 }

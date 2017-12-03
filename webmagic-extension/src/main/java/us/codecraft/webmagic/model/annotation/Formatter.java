@@ -1,10 +1,9 @@
 package us.codecraft.webmagic.model.annotation;
 
-import us.codecraft.webmagic.model.formatter.ObjectFormatter;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
+import us.codecraft.webmagic.model.formatter.ObjectFormatter;
 
 /**
  * Define how the result string is convert to an object for field.
@@ -16,28 +15,29 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD})
 public @interface Formatter {
 
-    Class<ObjectFormatter> DEFAULT_FORMATTER = ObjectFormatter.class;
+  Class<ObjectFormatter> DEFAULT_FORMATTER = ObjectFormatter.class;
 
-    /**
-     * Set formatter params.
-     *
-     * @return formatter params
-     */
-    String[] value() default "";
+  /**
+   * Set formatter params.
+   *
+   * @return formatter params
+   */
+  String[] value() default "";
 
-    /**
-     * Specific the class of field of class of elements in collection for field. <br>
-     * It is not necessary to be set because we can detect the class by class of field,
-     * unless you use a collection as a field. <br>
-     *
-     * @return the class of field
-     */
-    Class subClazz() default Void.class;
+  /**
+   * Specific the class of field of class of elements in collection for field. <br>
+   * It is not necessary to be set because we can detect the class by class of field,
+   * unless you use a collection as a field. <br>
+   *
+   * @return the class of field
+   */
+  Class subClazz() default Void.class;
 
-    /**
-     * If there are more than one formatter for a class, just specify the implement.
-     * @return implement
-     */
-    Class<? extends ObjectFormatter> formatter() default ObjectFormatter.class;
+  /**
+   * If there are more than one formatter for a class, just specify the implement.
+   *
+   * @return implement
+   */
+  Class<? extends ObjectFormatter> formatter() default ObjectFormatter.class;
 
 }
